@@ -7,6 +7,7 @@ const mainTaskList = document.getElementById("mainTaskList")
 const addBtn = document.getElementById("addBtn")
 const allBuckets = document.querySelectorAll(".buckets")
 // const allListItems = document.querySelectorAll(".items")
+let textSelectedId = ""
 
 const appSettings = {
     databaseURL: ""
@@ -38,6 +39,7 @@ function appendTaskUl(taskArray) {
         listEl.setAttribute("draggable", "true")
         listEl.setAttribute("id", uuidv4())
         listEl.classList.add("listItems")
+        listEl.addEventListener("click", handleTaskClick)
         mainTaskList.append(listEl)
     }
 }
@@ -62,4 +64,42 @@ allBuckets.forEach(function (bucket) {
     bucket.addEventListener("dragstart", handleDrag)
     bucket.addEventListener("dragover", handleDragOver)
     bucket.addEventListener("drop", handleDrop)
+})
+
+function handleTaskClick() {
+    for (let task of document.querySelectorAll(".taskSelected")) {
+        task.classList.remove("taskSelected")
+    }
+    this.classList.add("taskSelected")
+    textSelectedId = this.id
+}
+
+document.addEventListener("keydown", function (e) {
+    console.log(e.code)
+    switch (e.code) {
+        case "Numpad1":
+            document.getElementById("b7").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad2":
+            document.getElementById("b8").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad3":
+            document.getElementById("b9").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad4":
+            document.getElementById("b4").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad6":
+            document.getElementById("b6").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad7":
+            document.getElementById("b1").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad8":
+            document.getElementById("b2").append(document.getElementById(textSelectedId))
+            break
+        case "Numpad9":
+            document.getElementById("b3").append(document.getElementById(textSelectedId))
+            break
+    }
 })

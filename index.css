@@ -24,3 +24,7 @@
 .userInput {
     user-select: none;
 }
+
+.taskSelected {
+    background-color: blueviolet;
+}
