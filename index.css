@@ -1,4 +1,4 @@
-.container{
+.container {
     padding: 30px;
     display: flex;
     width: 500px;
@@ -10,9 +10,17 @@
     justify-content: center;
 }
 
-.buckets{
+.buckets {
     width: 30%;
     height: 30%;
     background-color: cornflowerblue;
     border-radius: 5px;
+}
+
+.listItems {
+    cursor: move;
+}
+
+.userInput {
+    user-select: none;
 }
