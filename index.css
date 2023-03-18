@@ -1,9 +1,23 @@
+body,
+li,
+input,
+div,
+button {
+    /* font-family: 'Satoshi', sans-serif; */
+    /* font-family: 'Paquito', serif; */
+    font-family: 'Chubbo', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    box-sizing: border-box;
+    background-color: rgb(15, 15, 15);
+}
+
 .container {
-    padding: 30px;
+    padding: 10px;
     display: flex;
-    width: 500px;
-    height: 500px;
-    gap: 10px;
+    width: 80%;
+    height: 470px;
+    gap: 0px 10px;
     flex-wrap: wrap;
     margin: auto;
     align-items: center;
@@ -11,10 +25,13 @@
 }
 
 .buckets {
-    width: 30%;
+    width: 32%;
     height: 30%;
-    background-color: cornflowerblue;
+    /* background-color: #E7473C; */
+    background: linear-gradient(#E7473C, rgb(15, 15, 15));
     border-radius: 5px;
+    padding: 5px;
+
 }
 
 .listItems {
@@ -23,8 +40,53 @@
 
 .userInput {
     user-select: none;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 4px;
+    background-color: #E7473C;
 }
 
 .taskSelected {
-    background-color: blueviolet;
+    background-color: rgb(15, 15, 15);
+    color: #E7473C;
+}
+
+li {
+    list-style: none;
+    padding: 4px;
+    margin: 2px 0px;
+    background-color: #ea645a;
+    border-radius: 2px;
+}
+
+ul {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    overflow: auto;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 4px;
+    border-radius: 2px;
+    border: none;
+}
+
+input,
+button {
+    color: #E7473C;
+}
+
+button {
+    border-radius: 2px;
+    border: none;
+}
+
+button:hover {
+    background-color: #ea645a;
+    color: rgb(15, 15, 15);
 }

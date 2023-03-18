@@ -18,10 +18,12 @@ const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const tasklistInDB = ref(database, "bucketTasks")
 
-addBtn.addEventListener("click", function () {
+addBtn.addEventListener("click", pushIntoDB)
+
+function pushIntoDB() {
     push(tasklistInDB, taskInputEl.value)
     taskInputEl.value = ""
-})
+}
 
 onValue(tasklistInDB, function (snapshot) {
     mainTaskList.innerHTML = ""
@@ -100,6 +102,9 @@ document.addEventListener("keydown", function (e) {
             break
         case "Numpad9":
             document.getElementById("b3").append(document.getElementById(textSelectedId))
+            break
+        case "Enter":
+            pushIntoDB()
             break
     }
 })
