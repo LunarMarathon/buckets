@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 body,
 li,
 input,
@@ -6,8 +11,8 @@ button {
     /* font-family: 'Satoshi', sans-serif; */
     /* font-family: 'Paquito', serif; */
     font-family: 'Chubbo', sans-serif;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
     box-sizing: border-box;
     background-color: rgb(15, 15, 15);
 }
@@ -15,8 +20,8 @@ button {
 .container {
     padding: 10px;
     display: flex;
-    width: 80%;
-    height: 470px;
+    width: 100vw;
+    height: 100vh;
     gap: 0px 10px;
     flex-wrap: wrap;
     margin: auto;
@@ -25,8 +30,8 @@ button {
 }
 
 .buckets {
-    width: 32%;
-    height: 30%;
+    width: 19%;
+    height: 45%;
     /* background-color: #E7473C; */
     background: linear-gradient(#E7473C, rgb(15, 15, 15));
     border-radius: 5px;
@@ -90,3 +95,39 @@ button:hover {
     background-color: #ea645a;
     color: rgb(15, 15, 15);
 }
+
+/* @media (max-width: 500px) {
+
+    body,
+    li,
+    input,
+    div,
+    button {
+        font-family: 'Chubbo', sans-serif;
+        font-size: 20vh;
+        line-height: 25vh;
+        box-sizing: border-box;
+        background-color: rgb(15, 15, 15);
+    }
+
+    .container {
+        padding: 10px;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        gap: 0px 10px;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buckets {
+        width: 30vw;
+        height: 30vh;
+        background: linear-gradient(#E7473C, rgb(15, 15, 15));
+        border-radius: 5px;
+        padding: 5px;
+
+    }
+} */
